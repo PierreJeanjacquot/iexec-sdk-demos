@@ -1,3 +1,4 @@
+import { writeFile } from "node:fs/promises";
 import { iexec, workerpool } from "./config.js";
 
 const requester = await iexec.wallet.getAddress();
@@ -70,3 +71,16 @@ await new Promise<void>((resolve, reject) => {
     });
   });
 });
+
+console.log("Fetching result");
+
+const result = await iexec.task
+  .fetchResults(taskid)
+  .then((response) => response.arrayBuffer())
+  .then((arrayBuffer) => Buffer.from(arrayBuffer));
+
+const resultFileName = `${taskid}.zip`;
+
+await writeFile(resultFileName, result);
+
+console.log(`Result downloaded in ${resultFileName}`);

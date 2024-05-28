@@ -23,3 +23,4 @@ hackable examples:
 - `deploy-app.ts`
 - `publish-apporders.ts`
 - `run-app.ts`
+- `run-app-result-encryption.ts`

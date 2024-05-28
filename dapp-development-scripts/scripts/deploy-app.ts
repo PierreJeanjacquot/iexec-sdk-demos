@@ -10,16 +10,16 @@ const app = {
   multiaddr:
     "docker.io/iexechub/python-hello-world:8.0.0-sconify-5.7.5-v14-production",
   mrenclave: {
-    // optional for tee apps only
+    // optional for tee apps only (see doc: https://protocol.docs.iex.ec/for-developers/confidential-computing/create-your-first-sgx-app)
     framework: "SCONE",
     version: "v5",
     entrypoint: "python /app/app.py",
     heapSize: 1073741824,
     fingerprint:
-      "acf574009a4093846213a000039accaec90c8a242eb26a71063d967a74ac80ac", // scone fingerprint
+      "acf574009a4093846213a000039accaec90c8a242eb26a71063d967a74ac80ac", // scone fingerprint (from `docker run --rm -e SCONE_HASH=1 <app-image>`)
   },
   checksum:
-    "0xe89eb32fe956d44ed582123b2259dec6ccd60f4b0f680e9b6e262a4734f66486", // docker image digest
+    "0xe89eb32fe956d44ed582123b2259dec6ccd60f4b0f680e9b6e262a4734f66486", // docker image digest (from `docker pull <app-image> | grep "Digest: sha256:" | sed 's/.*sha256:/0x/'`)
 };
 
 console.log(`Deploying app: ${JSON.stringify(app, null, 2)}`);

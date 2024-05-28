@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "iexec": "^8.7.0-nightly-0a8c6deaf649bce4cead8433a6a93717a73614d4",
+    "tsx": "^4.11.0",
+    "typescript": "^5.4.5"
+  }
+}

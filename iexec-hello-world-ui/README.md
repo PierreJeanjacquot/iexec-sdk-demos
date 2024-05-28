@@ -1,5 +1,13 @@
 # iexec hello-world ui
 
+## Running the project
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
+
 ## Project scaffolding
 
 This project use

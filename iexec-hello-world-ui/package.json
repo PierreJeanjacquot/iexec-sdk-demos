@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.37.1",
-    "iexec": "^8.7.0-nightly-0a8c6deaf649bce4cead8433a6a93717a73614d4",
+    "iexec": "^8.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "viem": "^2.12.0",
